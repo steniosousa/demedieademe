@@ -1,0 +1,381 @@
+body{
+    background-color: black;
+}
+*{
+padding: 0;
+margin: 0;
+font-family: 'Mate SC', serif;
+background-color: black;
+}
+.list{
+height:35px;
+width:35px;
+cursor: pointer;
+background-color: rgba(0, 0, 0, 0.342);
+border-radius:0px 0px 10px 0px ;
+display:none; 
+}
+
+#botaolista{
+width:60%;
+background-color: #00000083;
+}
+
+.offcanvas-header{
+display:block;
+}
+.offcanvas-header p{
+font-size: 2.0rem;
+margin-top: 10px ;
+}
+
+#dropdownMenuButton{
+margin: 5px;
+background-color: transparent;
+border: none;
+}
+
+.offcanvas-header p{
+font-size: 2.0rem;
+margin-top: 10px ;
+color: white;
+}
+#offcanvasExampleLabel img{
+height: 50px;
+width:50px;
+background-color: white;
+}
+
+.logo_demed{
+width: 100%;
+height: 40vh;
+text-align: center;
+}
+
+.logo_demed img{
+width: 300px ;
+height: 300px;
+background: transparent;
+}
+
+.container-main{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr ;
+gap: 20px;
+text-align: center;
+height: 10vh;
+border-top: 3px dotted rgba(255, 255, 255, 0.37);
+padding-top: 20px;;
+top:40%;
+position: relative;
+}
+
+.template{
+height: 25px;
+width: 25px;
+}
+
+.template-1{
+grid-column-start: 1;
+grid-row-start: 1;
+background: transparent;
+}
+
+.template-2{
+grid-column-start: 2;
+grid-row-start: 1;
+background: transparent;
+}
+
+.template-3{
+grid-column-start: 3;
+grid-row-start: 1;
+background: transparent;
+
+}
+.template-4{
+grid-column-start: 1;
+grid-row-start: 2;
+background: transparent;
+}
+
+.template-5{
+grid-column-start: 2;
+grid-row-start: 2;
+background: transparent;
+
+}
+.template-6{
+grid-column-start: 3;
+grid-row-start: 2;
+background: transparent;
+}
+
+.template-7{
+grid-column-start: 1;
+grid-row-start: 3;
+background: transparent;
+}  
+
+.template-8{
+grid-column-start: 2;
+grid-row-start: 3;
+background: transparent;
+}
+
+.template-9{
+grid-column-start: 3;
+grid-row-start: 3;
+background: transparent;
+}
+
+.template-10{
+grid-column-start: 1;
+grid-row-start: 4;
+background: transparent;
+}
+
+
+.template_p{
+color: rgb(255, 255, 255);
+font-weight: bold;
+font-size: 20px;
+}
+
+.modal-content{
+    background: rgb(64, 224, 208);
+}
+
+.modal-header{
+    background: rgba(0, 255, 229, 0.452);
+}
+
+#exampleModalLabel img{
+    height: 50px;
+    width: 50px;
+}
+
+
+.modal-body img{
+    width: 100px;
+    height: 100px;
+
+} 
+
+.modal-body .fotos img{
+    height: auto;
+    width: 100%;
+}    
+
+.modal-body h3{
+    border-bottom: 1px solid black;
+    margin-top: 50px;
+    padding-bottom: 5px;
+}
+
+.modal-body p{
+    margin-top: 40px;
+    text-align: center;
+    background: rgb(64, 224, 208);
+}
+.foto-missionario{
+    width: 50%;
+    border-radius: 50%;
+    background: rgb(64, 224, 208);    
+}
+
+.missionário{
+    width: 80%;
+    background: rgb(64, 224, 208);
+}
+
+.missionário2{
+    width: 80%;
+    background: rgb(64, 224, 208);
+}
+
+.modal-header3{
+    padding: 0;
+    margin: 0;
+}
+
+.imagem{
+    background:url(https://saldaterra.org.br/wp-content/uploads/2017/11/noticia.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    width: 100%;
+    height: 100px;
+}
+
+.modal-content{
+    background: rgb(64, 224, 208);
+}
+
+.modal-header{
+    background: rgba(0, 255, 229, 0.452);
+}
+
+#exampleModalLabel img{
+    height: 50px;
+    width: 50px;
+}
+
+
+
+.modal-body h3{
+    background: rgb(64, 224, 208);
+}
+
+.modal-content{
+    background: rgb(64, 224, 208);
+}
+
+.modal-header{
+    background: rgba(0, 255, 229, 0.452);
+}
+
+#exampleModalLabel img{
+    height: 50px;
+    width: 50px;
+}
+
+.modal-body{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 255, 0);
+    text-align: center;
+    font-family: 'Mate SC', serif;
+    background: rgb(64, 224, 208);
+}
+.modal-body img{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(64, 224, 208);
+}
+
+.modal-body h1 {
+    background-color: rgb(64, 224, 208);
+}
+
+.modal-body p  {
+    background-color: rgb(64, 224, 208);
+}
+
+.dispor input{
+    font-family: 'Mate SC', serif;
+}
+
+#label-motivo-oracao{
+    font-family: 'Mate SC', serif;
+    text-align: center;
+}
+
+#label-motivo-oracao input{
+margin-top: 5px;
+}
+
+#label-motivo-oracao button{
+    margin-top: 5px;
+    padding:5px 50px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.requisitar{
+display: flex;
+ justify-content: center;
+ gap: 20px;
+ font-weight: bold;
+ font-family: 'Mate SC', serif;
+ background: rgb(64, 224, 208);
+}
+
+.requisitar h3{
+    border-bottom: 1px solid black;
+    padding:10px 15px;
+    background-color: rgb(0, 255, 221);
+    border-radius: 15px 15px 0px 0px;
+    cursor: pointer;
+}
+
+#Consagramos-todo-nosso-ser-a-ti{
+    background-color: rgb(64, 224, 208);
+}
+
+.modal-content{
+    background: rgb(64, 224, 208);
+}
+
+.modal-header{
+    background: rgba(0, 255, 229, 0.452);
+}
+
+#exampleModalLabel img{
+    height: 50px;
+    width: 50px;
+}
+
+.modal-body{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 255, 0);
+    text-align: center;  
+}
+
+.modal-body img{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(64, 224, 208);
+}
+
+.modal-footer{
+    background-color: rgb(64, 224, 208);
+}
+
+#o input{
+    font-family: 'Mate SC', serif;  
+}
+
+.o{
+    background-color: rgb(64, 224, 208);
+}
+
+.o input{
+    background-color: rgb(64, 224, 208);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.o label{
+    background-color: rgb(64, 224, 208);
+}
+
+.o textarea{
+    background-color: rgb(64, 224, 208);
+    font-size: 20px; 
+}
+
+audio{
+    width: 200px;
+    max-width: 200px;
+}
+
+#ieademe {
+    top:0;
+    left:0;
+    position: relative;
+    width: 100%; 
+    height: 50vh;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+}
+ 
