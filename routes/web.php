@@ -1,17 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthSessionController;
 use Illuminate\Support\Facades\Route;
-
-// NÃO MEXA
-//Rota para redirecionar quando autenticado
-Route::get("/admin", [LoginController::class, 'index']);
-//Rota que exibirá um formulário de login, caso usuário não esteja autenticado.
-Route::get("/admin", "LoginController@index");
-//Rota para deslogar
-Route::get("/admin/logout", "LoginController@logout");
-//Rota POST para envio de autenticação
-Route::get("/admin", "LoginController@postLogin");
-
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,6 +9,10 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth:admin'])->name('dashboard');
+
+Route::get('/login', [AuthSessionController::class, 'loginScreen'])->middleware('guest')->name('login');
+Route::post('/login', [AuthSessionController::class, 'authenticate'])->middleware('guest')->name('login');
+Route::post('/logout', [AuthSessionController::class, 'logout'])->middleware('auth:user,admin')->name('logout');
 
 require __DIR__.'/auth.php';

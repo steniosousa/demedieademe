@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/css/welcome.css"/>
-    <script type="text/javascript" src="/js/welcome.js"></script>
+
     <title>DEMED</title>
 </head>
 <body>
@@ -23,11 +23,24 @@
       muted  id="ieademe" >
         <source src="/assets/WhatsApp Video 2021-06-02 at 17.51.11.mp4" type="video/mp4" alt="Girl in a jacket">
     </video>    
+    <audio style="display: none;" id="radio" autoplay src=" https://ssl.xcast.com.br:13322/stream?icy=http"></audio>
+    <div id="players-radio"class="players-radio">
+      <img id="play" onclick="play()" style="text-align: center; display:none;" src="/assets/botao-play.svg"> 
+      <img id="pause" onclick="pause()" style="text-align: center; " src="/assets/botao-de-pausa.svg"> 
+    </div>
+  
+
 <!-- ................................................................................................................................................................................ -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="botaolista" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasExampleLabel"><img src="person_black_24dp.svg"></h5>
-      <P>Usuário</P>
+      @guest
+        <P>Usuário</P>  
+      @endguest
+      @auth
+        <p>{{Auth::user()->name}}</p>
+        <p>{{Auth::user()->data_nascimento}}</p>
+      @endauth
     </div>
     <div class="offcanvas-body">
       <div class="dropdown.mt-3">
@@ -64,8 +77,25 @@
       </div>
     </div>
     </div>
-    <audio  controls autoplay src=" https://ssl.xcast.com.br:13322/stream?icy=http"></audio>
-    <button onclick="logar()" class="btn btn-secondary" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">login</button>
+
+
+
+
+ 
+
+
+
+    @guest
+      <button onclick="logar()" class="btn btn-secondary" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">login</button>
+    @endguest
+    @auth
+      <a id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+        Logout
+      </a>    
+      <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+          {{ csrf_field() }}
+      </form>    
+    @endauth
   </div> 
 
 <!-- .............................................................................................................................................. -->
@@ -223,6 +253,6 @@
   </div>
 
 <!-- ........................................................................................................................................ -->
-
+<script type="text/javascript" src="/js/welcome.js"></script>
 </body>
 </html>

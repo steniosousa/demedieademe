@@ -1,6 +1,22 @@
 body{
     background-color: black;
 }
+#logout{
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+.players-radio{
+    text-align: center;
+    display: none;
+}
+.players-radio img{
+    width: 40px;
+    height: 40px;
+    padding-bottom: 10px;
+}
 *{
 padding: 0;
 margin: 0;
@@ -368,7 +384,7 @@ audio{
     left:0;
     position: relative;
     width: 100%; 
-    height: 50vh;
+    height: 40vh;
 }
 
 nav{

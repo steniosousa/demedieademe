@@ -4,6 +4,9 @@ setTimeout(function(){
 setTimeout(function(){
     const stenio = document.getElementById("aparecer").style.display = "";
 }, 1000);
+setTimeout(function(){
+    const stenio2 = document.getElementById("players-radio").style.display = "block";
+}, 1000);
 
 function mudançaDeConteúdo() {
 const a = document.getElementById("Consagramos-todo-nosso-ser-a-ti").style.display = "none";
@@ -22,6 +25,26 @@ function input(){
   const m = document.getElementById("input-nome").style.display = "";
 }
 
+function pause(){
+    var limonadadadada = document.getElementById("radio").src = "";
+    var limaoaa = document.getElementById("play").style.display="";
+    var asja = document.getElementById("pause").style.display="none";
+}
+function play(){
+    var limonadadadada = document.getElementById("radio").src = "https://ssl.xcast.com.br:13322/stream?icy=http";
+    var limaoaa = document.getElementById("pause").style.display="";
+    var asja = document.getElementById("play").style.display="none";
+
+
+}
+
+  
+
+
+
+
+
+
 const oracao = document.getElementById("requisitarOracao");
                   oracao.addEventListener("submit",(e)=>{
                       e.preventDefault();
@@ -29,5 +52,4 @@ const oracao = document.getElementById("requisitarOracao");
                   
 function logar(){
     window.location.href = "/login";
-
 }
