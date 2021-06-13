@@ -23,10 +23,16 @@
       muted  id="ieademe" >
         <source src="/assets/WhatsApp Video 2021-06-02 at 17.51.11.mp4" type="video/mp4" alt="Girl in a jacket">
     </video>    
-    <audio style="display: none;" id="radio" autoplay src=" https://ssl.xcast.com.br:13322/stream?icy=http"></audio>
+    <audio style="display: none;" id="radio" autoplay src="https://ssl.xcast.com.br:13322/stream?icy=http"></audio>
     <div id="players-radio"class="players-radio">
-      <img id="play" onclick="play()" style="text-align: center; display:none;" src="/assets/botao-play.svg"> 
-      <img id="pause" onclick="pause()" style="text-align: center; " src="/assets/botao-de-pausa.svg"> 
+      <div>
+        <img id="play" onclick="play()" style="text-align: center; display:none;" src="/assets/botao-play.svg"> 
+        <img id="pause" onclick="pause()" style="text-align: center; " src="/assets/botao-de-pausa.svg"> 
+      
+      </div>
+      <div >
+       
+      </div>
     </div>
   
 
@@ -45,7 +51,7 @@
     <div class="offcanvas-body">
       <div class="dropdown.mt-3">
           <div class="lateral-items">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+        {{-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
           Oração
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -73,18 +79,10 @@
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          </ul> --}}
       </div>
     </div>
     </div>
-
-
-
-
- 
-
-
-
     @guest
       <button onclick="logar()" class="btn btn-secondary" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">login</button>
     @endguest
@@ -128,7 +126,7 @@
             <h1 id="tudo"> </h1>
             <div id="o" class="dispor" style="display: none;"> 
                 <div class="o"> <input type="checkbox" onclick="input()"  > Se identificar </div>
-                <div > <input type="text" placeholder="Nome" id="input-nome" style="display: none;"></div>
+                <div > <input type="text" placeholder="Nome" id="input-nome" style="display: none;  background: rgb(64, 224, 208); width:80%;"></div>
             </div>
                 <div  id="requisitarOracao" style="display: none;">
                     <form class="o" id="label-motivo-oracao">
@@ -243,7 +241,8 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-           
+          <h1>Informar data</h1>
+           <input type="date">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
