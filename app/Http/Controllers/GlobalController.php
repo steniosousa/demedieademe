@@ -9,7 +9,12 @@ class GlobalController extends Controller
 {
     public function index()
     {
-        $aboutIgreja = DB::table('igrejas')->get()->first()->sobre;
+        try{
+            $aboutIgreja = DB::table('igrejas')->get()->first()->sobre;
+        }catch(\Exception $error){
+            var_dump("Ocorreu um erro");
+        }
+        
         return view('welcome', ['about' => $aboutIgreja]);
     }
 }
