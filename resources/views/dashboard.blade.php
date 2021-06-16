@@ -12,6 +12,12 @@
 </head>
 <body>
 <h1>Seção Administrador</h1>
+@if(Session::has('success'))
+    <p class="alert alert-success">{{ Session::get('success') }}</p>
+@endif
+@if(Session::has('failed'))
+    <p class="alert alert-danger">{{ Session::get('failed') }}</p>
+@endif
 <ul>
     <li>
         <p  data-bs-toggle="modal" data-bs-target="#igreja">Igreja</p>
@@ -34,13 +40,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <input type="text" placeholder="Texto">
-          <input onclick="igreja-submit()" type="submit">
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+            <form method="POST" action="{{ route('igreja') }}">
+                @csrf
+                <input name="id" value="{{$igreja->id ?? ''}}" hidden>
+                <textarea class="form-control" name="about" placeholder="Digite sobre a igreja">{{$igreja->sobre ?? ''}}</textarea>
+                <input class="btn btn-secondary mt-2" type="submit">
+            </form>
         </div>
       </div>
     </div>
@@ -204,8 +209,8 @@
         font-family: 'Mate SC', serif;
     }
     h1{
-        border-bottom:1px dotted black; 
-        padding-bottom:10px; 
+        border-bottom:1px dotted black;
+        padding-bottom:10px;
     }
     ul{
         font-size: 20px;
@@ -214,17 +219,17 @@
     ul li{
         list-style-type: none;
 
-      
+
     }
     ul li p{
         margin: 20px;
         border: 1px solid black;
         border-radius: 20px;
         padding: 5px 10px;
-       
-        
+
+
     }
 </style>
-    
+
 </body>
 </html>

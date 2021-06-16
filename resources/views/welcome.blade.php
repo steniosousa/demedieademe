@@ -1,4 +1,3 @@
-<!-- 1 joao 2:6 "Aquele que diz que segue a Ele, deve andar como Ele andou" -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,12 +24,12 @@
      <video autoplay loop
       muted  id="ieademe" >
         <source src="/assets/WhatsApp Video 2021-06-02 at 17.51.11.mp4" type="video/mp4" alt="Girl in a jacket">
-    </video>    
+    </video>
     <audio style="display: none;" id="radio" autoplay src="https://ssl.xcast.com.br:13322/stream?icy=http"></audio>
     <div id="players-radio"class="players-radio">
       <div>
-        <img id="play" onclick="play()" style="text-align: center; display:none;" src="/assets/botao-play.svg"> 
-        <img id="pause" onclick="pause()" style="text-align: center; " src="/assets/botao-de-pausa.svg"> 
+        <img id="play" onclick="play()" style="text-align: center; display:none;" src="/assets/botao-play.svg">
+        <img id="pause" onclick="pause()" style="text-align: center; " src="/assets/botao-de-pausa.svg">
       </div>
     </div>
 <!-- ................................................................................................................................................................................ -->
@@ -38,7 +37,7 @@
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasExampleLabel"><img src="person_black_24dp.svg"></h5>
       @guest
-        <P>Usuário</P>  
+        <P>Usuário</P>
       @endguest
       @auth
         <p>{{Auth::user()->name}}</p>
@@ -57,16 +56,16 @@
     @auth
       <a id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
         Logout
-      </a>    
+      </a>
       <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
           {{ csrf_field() }}
-      </form>    
+      </form>
     @endauth
-  </div> 
+  </div>
 
 <!-- .............................................................................................................................................. -->
     <div class="container-main" id="aparecer" style="display:none;">
-        <div class="template-1">  <a><img id="a"  data-bs-toggle="modal" data-bs-target="#igreja" class="template" src="/assets/igreja.svg"></a> <p href="#a" class="template_p" >Igreja</p></div> 
+        <div class="template-1">  <a><img id="a"  data-bs-toggle="modal" data-bs-target="#igreja" class="template" src="/assets/igreja.svg"></a> <p href="#a" class="template_p">Igreja</p></div>
         <div class="template-2"> <a href="#"><img id="b"  data-bs-toggle="modal" data-bs-target="#oração" class="template" src="/assets/oracao.svg"></a> <p href="#b" class="template_p" >Oração</p> </div>
         <div class="template-3">  <a href="#"><img  data-bs-toggle="modal" data-bs-target="#campoMissionário" class="template" src="/assets/missao.svg"></a> <p class="template_p" >Campo missionário</p></div>
         <div class="template-4">  <a href="#"><img data-bs-toggle="modal" data-bs-target="#galeria" class="template" src="/assets/galeria.svg"></a> <p class="template_p" >Galeria</p></div>
@@ -92,7 +91,7 @@
                 <h3  onclick="Peticao()">Pedir oração</h3>
             </div>
             <h1 id="tudo"> </h1>
-            <div id="o" class="dispor" style="display: none;"> 
+            <div id="o" class="dispor" style="display: none;">
                 <div class="o"> <input type="checkbox" onclick="input()"  > Se identificar </div>
                 <div > <input type="text" placeholder="Nome" id="input-nome" style="display: none;  background: rgb(64, 224, 208); width:80%;"></div>
             </div>
@@ -105,15 +104,15 @@
                         <button type="submit"> enviar</button>
                     </form>
                 </div>
-           
+
             <div id="Consagramos-todo-nosso-ser-a-ti">
             <h1 >1. Comece a orar</h1>
                 <p>Antes de começar, encontre um lugar tranquilo onde você
-                     se sinta confortável. Uma boa maneira de começar é se 
-                     dirigir nominalmente a Deus. Você pode dizer “Amado Deus”, 
+                     se sinta confortável. Uma boa maneira de começar é se
+                     dirigir nominalmente a Deus. Você pode dizer “Amado Deus”,
                      “Amado Pai Celestial”, “Nosso Pai que estás nos céus”, ou simplesmente “Deus”.</p>
                 <h1>2. Converse com Deus</h1>
-                <p>Compartilhe com Deus seus sentimentos sobre outras pessoas. Você pode orar pelas necessidades delas, 
+                <p>Compartilhe com Deus seus sentimentos sobre outras pessoas. Você pode orar pelas necessidades delas,
                  ou perguntar como pode amá-las e ajudá-las.</p>
             </div>
         </div>
@@ -133,9 +132,7 @@
         <div class="modal-body">
             <img src="/assets/Sem Título-1.png">
             <h1 style=" background-color: rgb(64, 224, 208);"> Assembléia De Deus  </h1>
-            <p>A ieademe é composta por x igrejas, cada qual 
-                localizada em posições estratégicas para atrair mais almas ao Reino de nosso Senhor Jesus.
-             </p>
+            <p>{{$about}}</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -166,7 +163,7 @@
                 <img class="foto-missionario" src="https://blog.unyleya.edu.br/wp-content/uploads/2017/12/saiba-como-a-educacao-ajuda-voce-a-ser-uma-pessoa-melhor.jpeg">
             </div>
             <h3>Porque fazer missões?</h3>
-            <p>A Igreja é conclamada por Jesus a ser sal e luz no “mundo”. Ela é desafiada 
+            <p>A Igreja é conclamada por Jesus a ser sal e luz no “mundo”. Ela é desafiada
                 a transformar não somente as pessoas, mas o meio em que a Igreja e cada pessoa está inserida.
                 Participar da missão significa participar ao lado de Deus de sua
                 intenção de promover e amar o ser humano.</p>
@@ -220,7 +217,7 @@
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">  
+        <div class="modal-body">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -250,7 +247,7 @@
           <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">  
+          <div class="modal-body">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
