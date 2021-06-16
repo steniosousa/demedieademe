@@ -220,6 +220,7 @@
       border: 1px solid black;
       max-width: 300px;
       padding: 5px 120px;
+      border-radius: 20px;  
     }
 
 </style>
