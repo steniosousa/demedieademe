@@ -53,3 +53,13 @@ const oracao = document.getElementById("requisitarOracao");
 function logar(){
     window.location.href = "/login";
 }
+function escuro(){
+    var b = document.getElementById("body").style.background="grey";
+    var c = document.getElementById("escuro").style.display="none";
+    var d = document.getElementById("natural").style.display="block"
+  }
+  function claro(){
+    var b = document.getElementById("body").style.background="";
+    var c = document.getElementById("natural").style.display="none"
+    var d = document.getElementById("escuro").style.display="block";
+  }
