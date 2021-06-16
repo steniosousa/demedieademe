@@ -12,19 +12,18 @@
 </head>
 <body>
 <h1>Seção Administrador</h1>
-<ul>
-    <li>
-        <p  data-bs-toggle="modal" data-bs-target="#igreja">Igreja</p>
-        <p  data-bs-toggle="modal" data-bs-target="#oracao">Oração</p>
-        <p  data-bs-toggle="modal" data-bs-target="#missionarios">Missionários</p>
-        <p  data-bs-toggle="modal" data-bs-target="#galeria">Galeria</p>
-        <p  data-bs-toggle="modal" data-bs-target="#eventos">Eventos</p>
-        <p  data-bs-toggle="modal" data-bs-target="#contribuicao">Contribuição</p>
-        <p  data-bs-toggle="modal" data-bs-target="#liturgia">Liturgia do dia</p>
-        <p  data-bs-toggle="modal" data-bs-target="#shopping">Shopping</p>
-        <p  data-bs-toggle="modal" data-bs-target="#video">video</p>
-    </li>
-</ul>
+<div class="meio">
+  <p   data-bs-toggle="modal" data-bs-target="#igreja">Igreja</p>
+  <p   data-bs-toggle="modal" data-bs-target="#oracao">Oração</p>
+  <p  data-bs-toggle="modal" data-bs-target="#missionarios">Missionários</p>
+  <p  data-bs-toggle="modal" data-bs-target="#galeria">Galeria</p>
+  <p  data-bs-toggle="modal" data-bs-target="#eventos">Eventos</p>
+  <p  data-bs-toggle="modal" data-bs-target="#contribuicao">Contribuição</p>
+  <p  data-bs-toggle="modal" data-bs-target="#liturgia">Liturgia</p>
+  <p  data-bs-toggle="modal" data-bs-target="#shopping">Shopping</p>
+  <p  data-bs-toggle="modal" data-bs-target="#video">video</p>
+</div>
+
 {{-- ..........................................Igreja........................................................... --}}
 <div class="modal fade" id="igreja" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -196,7 +195,7 @@
     </div>
   </div>
 <style>
-    *{
+    body{
         padding: 0;
         margin: 0;
         text-align: center;
@@ -207,23 +206,22 @@
         border-bottom:1px dotted black; 
         padding-bottom:10px; 
     }
-    ul{
-        font-size: 20px;
+    .meio{
+     display: flex;
+     align-items: center;
+    flex-direction: column;
+     justify-content: center;
 
     }
-    ul li{
-        list-style-type: none;
+    p{
+      text-indent: -5px;
+     
+      font-size: 20px;
+      border: 1px solid black;
+      max-width: 300px;
+      padding: 5px 120px;
+    }
 
-      
-    }
-    ul li p{
-        margin: 20px;
-        border: 1px solid black;
-        border-radius: 20px;
-        padding: 5px 10px;
-       
-        
-    }
 </style>
     
 </body>
