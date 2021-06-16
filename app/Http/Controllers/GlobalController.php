@@ -9,8 +9,12 @@ class GlobalController extends Controller
 {
     public function index()
     {
+        $aboutIgreja = '';
         try{
-            $aboutIgreja = DB::table('igrejas')->get()->first()->sobre;
+            $igreja = DB::table('igrejas')->get()->first();
+            if($igreja){
+                $aboutIgreja = $igreja->sobre;
+            }
         }catch(\Exception $error){
             var_dump("Ocorreu um erro");
         }
