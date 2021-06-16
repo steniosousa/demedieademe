@@ -133,7 +133,7 @@
         <div class="modal-body">
             <img src="/assets/Sem Título-1.png">
             <h1 style=" background-color: rgb(64, 224, 208);"> Assembléia De Deus  </h1>
-            <p>{{$about}}</p>
+            <p>{{$about ?? ''}}</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
