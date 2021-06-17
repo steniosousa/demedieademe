@@ -41,18 +41,20 @@ class RegisteredUserController extends Controller
                 'password' => Hash::make($request->password),
                 'data_nascimento' => Carbon::create($request->born),
             ]);
+
+            Auth::guard('admin')->login($user);
         }else{
             $user = User::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
             ]);
+            Auth::login($user);
         }
 
 
         event(new Registered($user));
 
-        Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
     }
