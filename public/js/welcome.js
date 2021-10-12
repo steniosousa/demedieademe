@@ -37,14 +37,6 @@ function play(){
 
 
 }
-
-  
-
-
-
-
-
-
 const oracao = document.getElementById("requisitarOracao");
                   oracao.addEventListener("submit",(e)=>{
                       e.preventDefault();
